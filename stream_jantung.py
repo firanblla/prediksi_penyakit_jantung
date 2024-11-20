@@ -24,10 +24,13 @@ with col1:
 
 with col2:
     try:
-        sex = int(st.text_input('Jenis Kelamin (1: Laki-laki, 0: Perempuan)', value='0'))
+        sex = int(st.text_input('Jenis Kelamin (1: Laki-laki, 2: Perempuan)', value='1'))
+        if sex not in [1, 2]:
+            st.error("Jenis kelamin harus berupa 1 (Laki-laki) atau 2 (Perempuan).")
+            sex = 1  # Menetapkan default jika input tidak valid
     except ValueError:
-        st.error("Jenis kelamin harus berupa 0 atau 1.")
-        sex = 0
+        st.error("Jenis kelamin harus berupa 1 atau 2.")
+        sex = 1  # Menetapkan default jika terjadi error
 
 with col1:
     try:
