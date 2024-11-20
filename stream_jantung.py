@@ -4,7 +4,7 @@ import numpy as np
 
 # Membaca model
 try:
-    Jantung_model = pickle.load(open('C:/Users/Fira/Documents/FIRA STUPEN/Tugas_Akhir/Jantung_model.sav', 'rb'))
+    Jantung_model = pickle.load(open('Jantung_model.sav', 'rb'))
 except FileNotFoundError:
     st.error("File model tidak ditemukan. Pastikan path file sudah benar.")
     st.stop()
